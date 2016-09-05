@@ -1,0 +1,87 @@
+body{
+    -webkit-user-select:none ;
+    -webkit-app-region:drag ;
+}
+.container-fluid{
+    margin-top: 15px;
+}
+.row p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.cpl_file{
+    float: right;
+}
+.menu button{
+    padding: 5px;
+    font-size: 12px;
+}
+.menu p{
+    display: inline-block;
+    width:400px;
+}
+.file{
+    overflow: auto;
+    height: 600px;
+}
+.file th:nth-child(1){
+    width: 10px;
+}
+.file th:nth-child(2){
+    width: 300px;
+}
+.file th:nth-child(3){
+    width: 250px;
+}
+.file th:nth-child(4){
+    width: 100px;
+}
+.file img{
+    height: 20px;
+    width: 20px;
+    padding-right: 2px;
+    padding-bottom: 5px;
+}
+.file tr:hover{
+    background-color: #c4e3f3;
+}
+.file tr.ng-enter{
+    transition: 0.3s linear all;
+    opacity:0;
+}
+.file tr.ng-enter.ng-enter-active{
+    opacity: 1;
+}
+.file td{
+    height: 20px;
+}
+.file label{
+    width: 300px;
+    height: 20px;
+    font-size: 14px;
+    text-overflow:ellipsis ;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: pre;
+    margin: 0;
+}
+.cpu_message h1{
+    font-weight: 900;
+    font-size: 20px;
+}
+.cpu_message p{
+    font-size: 14px;
+    margin: 13px;
+}
+._select{
+    background-color: #0074d9 !important;
+}
+.not_select{
+   background-color: #fdfdfd;
+}
+.cutting{
+    opacity: 0.5;
+}
+.not_cutting{
+    opacity: 1;
+}

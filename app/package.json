@@ -1,0 +1,12 @@
+{
+  "name": "资源管理器",
+  "version": "0.1.0",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "angular-animate": "^1.5.8",
+    "iconv-lite": "^0.4.13"
+  }
+}

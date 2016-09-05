@@ -1,0 +1,37 @@
+<article class="row">
+<div id="file">
+    <div class='menu' id="menu">
+        <button type="button" class="btn btn-info" ng-click="home()" ng-disabled="path=='Computer'">主页</button>
+        <button type="button" class="btn btn-info" ng-click="go_ahead()" ng-disabled="npos==pathstore.length-1">前进</button>
+        <button type="button" class="btn btn-info" ng-click="go_back()" ng-disabled="npos==-1">后退</button>
+        <p>地址:{{path}}</p>
+        <input type="text" ng-model="key">
+        <button type="button" class="btn btn-info" ng-click="search()" ng-disabled="searching==true">搜索</button>
+    </div>
+<table class="file">
+    <thead>
+    <tr>
+        <th>    </th>
+        <th>Name</th>
+        <th ng-show="path!='Computer'">修改日期</th>
+        <th>类型</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="x in save_array track by $index "
+        ng-click="get_select(x.index)"
+        ng-class="{true:'_select',false:'not_select'}[x.select]"
+        ng-dblclick="change_path(x)"
+        id={{x.index}}>
+        <td><img ng-class="{true:'cutting',false:'not_cutting'}[x.cut]" src={{x.img}} ></td>
+        <td ng-if="x.rename">
+            <input type="text" ng-model="x.filename" ng-blur="_rename(x.index)">
+        </td>
+        <td ng-if="!x.rename" ><label>{{x.filename}}</label></td>
+        <td ng-show="path!='Computer'"><label>{{x.time}}</label></td>
+        <td><label>{{x.type}}</label></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</article>

@@ -1,0 +1,9 @@
+<div class="cpu_message">
+    <h1> 本机信息</h1>
+    <p> 处理器:{{cpu_arch}}<br></p>
+    <p> 剩余内存:{{cpu_free_mem/1024/1024/1024 | number:2}}GB<br></p>
+    <p> 总内存:{{cpu_total_mem/1024/1024/1024 | number:2}}GB<br></p>
+    <p> 当前系统版本:Windows {{os_version}}<br></p>
+    <p> 计算机运行时间:{{os_up_time/60 /60 | number:2}}小时<br></p>
+    <p> 主机名称:{{host_name}}<br></p>
+</div>
